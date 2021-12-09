@@ -75,7 +75,8 @@ html{
     height: 400px;
 }
 #music{
-    width: 50%;
+    width: 90%;
+    max-width: 600px;
     position: absolute;
     left: 50%;
     bottom: 10%;
