@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <!--
+        Basicamente, para adicionar um audio a uma página, uso a tag audio, só que o source não é um atributo
+        mas sim uma tag, por isso coloquei ela dentro da tag audio, posso colocar sourcer de tipos de arquivos diferentes
+        talvez, ogg, mp3, se for atribuir um arquivo, tenho que checar se o navegador é compativel com ele, se não, 
+        basta atribuir outro formato, talvez o mp3, o navegador vai procurar qual dos dois, ou mais é o compativel,
+        um exemplo é o internet explorer, que não é compativel o ogg, mas é compativel com mp3
+    -->
+    <div id="container">
+        <div id="bannerContainer">
+            <img id="poster" src="./assets/bannerMusic1.jpg" style="width: 100%;">
+            <h2 id="title">testedeTítulo</h2>
+            <p id="artist">testedeArtista</p>
+        </div>
+        <div id="bottom_bar">
+            <audio controls style="margin: auto;" id="music">
+                <source id="musicSource" src="./musicsAssets/musica.mp3" type="audio/mpeg">
+            </audio>
+            <div id="controls_container">
+                <button id="btn_previous" onclick="player.previous()"></button>
+                <button id="btn_playAndPause" data-player="off"></button>
+                <button id="btn_next" onclick="player.next()"></button>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="js/data.js"></script>
+
+</body>
+
+</html>
