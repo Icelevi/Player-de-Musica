@@ -14,7 +14,7 @@ const songs = [
     music.load()
      }, 
      music3 = function(){
-    player.artist.innerHTML= "fulano";
+    player.artist.innerHTML= " George Michael";
     player.title.innerHTML= "Careless whispers";
     player.musicSource.src="./musicsAssets/carelesswhispers.mp3";
     player.poster.src="./assets/carelessWhispersPoster.jpg";
