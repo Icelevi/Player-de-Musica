@@ -7,4 +7,4 @@ https://www.youtube.com/watch?v=rBrd_3VMC3c
 \
 https://www.youtube.com/watch?v=Vtt7kCtdc_4
 \
-Page =https://icelevi.github.io/Player-de-Musica-construcao-/
+Page =https://icelevi.github.io/Player-de-Musica/
