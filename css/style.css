@@ -24,8 +24,13 @@ position: absolute;
 top: 5%;
 left: 5%;
 width: auto;
-
-
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover{
+    text-decoration: underline;
 }
  #first_musicSelector{
     background-image: url(../assets/posters/NeverFindPoster.jpg);
@@ -99,11 +104,11 @@ z-index: 5;
     display: inline-block;
 }
 #bottom_bar{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+     width: 100%;
     height: 6rem;
-    background-color: #101010   ;
+    background-color: #101010;
+    bottom: 0;
 }
 #controls_container{
     position: absolute;
@@ -201,7 +206,28 @@ z-index: 5;
     background-color: transparent;
     border: none;
 }
-@media (max-width: 1080px) {
+#bottomInterface{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-top: 10px;
+    bottom: 0;
+}
+footer{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3;
+    position: relative;
+    bottom: 0;
+    background-color: rgb(37, 37, 37);
+  }
+  .links{
+      display: inline-block;
+      margin-left: 3rem;
+      color: gray;
+  }
+@media (max-width: 1080px) {    
     #container{
         height: auto;
     }
@@ -219,19 +245,21 @@ z-index: 5;
         transform: translateX(-50%);
         width: 25rem;
     }
-    #bottom_bar{
-        position: relative;
-    }
+  
     html{
         font-size: 14px;
+    }
+    #bottomInterface{
+        position: relative;
     }
     }
 @media (max-width: 750px) {
 html{
     font-size: 14px;
 }
+
 #seekbar{
-    width: 10rem;
+    width: 60%;
 }
 #durationControl{
     width: 60%;
@@ -241,6 +269,8 @@ html{
     html{
         font-size: 10px;
     }
+    #links{
+display: block;    }
 }
 @media (max-width: 380px) {
 #durationControl{
@@ -249,4 +279,5 @@ html{
 #bottom_bar{
     height: 8rem;
 }
+
 }
