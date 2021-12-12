@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--
+        Basicamente, para adicionar um audio a uma página, uso a tag audio, só que o source não é um atributo
+        mas sim uma tag, por isso coloquei ela dentro da tag audio, posso colocar sourcer de tipos de arquivos diferentes
+        talvez, ogg, mp3, se for atribuir um arquivo, tenho que checar se o navegador é compativel com ele, se não, 
+        basta atribuir outro formato, talvez o mp3, o navegador vai procurar qual dos dois, ou mais é o compativel,
+        um exemplo é o internet explorer, que não é compativel o ogg, mas é compativel com mp3
+    -->
+    <main id="container">
+
+        <section id="musicSelectorContainer">
+            <div id="first_musicSelector" class="musicSelector">
+                <div class="musicSelectorBlackBackground">
+                    <button onclick="playerActions.playSelectedMusic(this.dataset.musicnum)" data-musicnum="0"
+                        class="btn_musicSelector"></button>
+                    <h3 class="headerOfMusicSelector">You'll Never Find Another Love Like Mine</h3>
+                    <p class="paragraphOfMusicSelector">Lou Raws</p>
+                </div>
+            </div>
+
+            <div id="second_musicSelector" class="musicSelector">
+                <div class="musicSelectorBlackBackground">
+                    <button onclick="playerActions.playSelectedMusic(this.dataset.musicnum)" data-musicnum="1"
+                        class="btn_musicSelector"></button>
+                    <h3 class="headerOfMusicSelector">What a Wonderful World</h3>
+                    <p class="paragraphOfMusicSelector">Louis Armstrong</p>
+                </div>
+            </div>
+
+            <div id="third_musicSelector" class="musicSelector">
+                <div class="musicSelectorBlackBackground">
+                    <button onclick="playerActions.playSelectedMusic(this.dataset.musicnum)" data-musicnum="2"
+                        class="btn_musicSelector"></button>
+                    <h3 class="headerOfMusicSelector">Como é grande o meu amor por você</h3>
+                    <p class="paragraphOfMusicSelector">Roberto Carlos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bannerContainer">
+            <img id="poster" src="./assets/posters/NeverFindPoster.jpg" style="width: 100%;">
+            <h2 id="title">testedeTítulo</h2>
+            <p id="artist">testedeArtista</p>
+        </section>
+
+        <section id="bottom_bar">
+            <audio style="margin: auto;" id="music">
+                <source id="musicSource" src="./musicsAssets/neverfind.mp3" type="audio/mpeg">
+            </audio>
+            <div id="controls_container">
+                <button id="btn_previous" onclick="playerActions.previousMusic()"></button>
+                <button id="btn_playAndPause" data-player="off"></button>
+                <button id="btn_next" onclick="playerActions.nextMusic()"></button>
+            </div>
+
+            <div id="bottom_controls_container">
+                <div id="durationControl">
+                    <div class="durationTime" id="current_duration">00:00</div>
+                    <input id="seekbar" type="range" min="0" max="0" step="1">
+                    <div class="durationTime" id="total_duration">00:00</div>
+                </div>
+                <div id="volumeControlContainer">
+                    <button id="volume" data-situation="unmuted">
+                    </button>
+                    <input id="volumeControl" type="range" min="0" max="100" step="1">
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="/js/data.js"></script>
+    <script src="/js/playerElements.js"></script>
+    <script src="./js/actions.js"></script>
+
+
+</body>
+
+</html>
